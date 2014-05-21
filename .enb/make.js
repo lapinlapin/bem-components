@@ -1,9 +1,10 @@
 module.exports = function(config) {
-    var tools = require('enb-bem-docs')(config);
+    var docTools = require('enb-bem-docs')(config);
+    var sets = require('enb-bem-sets')(config);
 
     config.setLanguages(['en', 'ru']);
 
-    tools.configureSets({
+    docTools.configureSets({
         sets : {
             destPath : 'desktop.sets',
             levels : getDesktopLibLevels(config)
@@ -46,7 +47,21 @@ module.exports = function(config) {
         }
     });
 
-    config.nodes('*.pages/*', function(nodeConfig) {
+    sets
+        .bundles('desktop.tests', {
+            levels : getDesktopLibLevels(config),
+            suffixes : ['tests']
+        })
+        .bundles('touch-pad.tests', {
+            levels : getTouchPadLibLevels(config),
+            suffixes : ['tests']
+        })
+        .bundles('touch-phone.tests', {
+            levels : getTouchPhoneLibLevels(config),
+            suffixes : ['tests']
+        });
+
+    config.nodes(['*.pages/*', '*.tests/*/*'], function(nodeConfig) {
         nodeConfig.addTechs([
             [require('enb/techs/file-provider'), { target : '?.bemjson.js' }],
             [require('enb/techs/bemdecl-from-bemjson')],
@@ -88,7 +103,7 @@ module.exports = function(config) {
         ]);
     });
 
-    config.nodes('desktop.pages/*', function(nodeConfig) {
+    config.nodes(['desktop.pages/*', 'desktop.tests/*/*'], function(nodeConfig) {
         nodeConfig.addTechs([
             [require('enb/techs/levels'), { levels : getDesktopLevels(config) }],
             [require('enb-autoprefixer/techs/css-autoprefixer'), {
@@ -99,7 +114,7 @@ module.exports = function(config) {
         ]);
     });
 
-    config.nodes('touch-pad.pages/*', function(nodeConfig) {
+    config.nodes(['touch-pad.pages/*', 'touch-pad.tests/*/*'], function(nodeConfig) {
         nodeConfig.addTechs([
             [require('enb/techs/levels'), { levels : getTouchPadLevels(config) }],
             [require('enb-autoprefixer/techs/css-autoprefixer'), {
@@ -110,7 +125,7 @@ module.exports = function(config) {
         ]);
     });
 
-    config.nodes('touch-phone.pages/*', function(nodeConfig) {
+    config.nodes(['touch-phone.pages/*', 'touch-phone.tests/*/*'], function(nodeConfig) {
         nodeConfig.addTechs([
             [require('enb/techs/levels'), { levels : getTouchPhoneLevels(config) }],
             [require('enb-autoprefixer/techs/css-autoprefixer'), {
@@ -122,7 +137,7 @@ module.exports = function(config) {
     });
 
     config.mode('development', function() {
-        config.nodes('*.pages/*', function(nodeConfig) {
+        config.nodes(['*.pages/*', '*.tests/*/*'], function(nodeConfig) {
             nodeConfig.addTechs([
                 [require('enb/techs/file-copy'), { sourceTarget : '?.css', destTarget : '_?.css' }],
                 [require('enb/techs/file-copy'), { sourceTarget : '?.js', destTarget : '_?.js' }]
@@ -131,7 +146,7 @@ module.exports = function(config) {
     });
 
     config.mode('production', function() {
-        config.nodes('*.pages/*', function(nodeConfig) {
+        config.nodes(['*.pages/*', '*.tests/*/*'], function(nodeConfig) {
             nodeConfig.addTechs([
                 [require('enb/techs/borschik'), { sourceTarget : '?.css', destTarget : '_?.css' }],
                 [require('enb/techs/borschik'), { sourceTarget : '?.js', destTarget : '_?.js' }]
@@ -144,6 +159,24 @@ function getDesktopLibLevels(config) {
     return [
         'common.blocks',
         'desktop.blocks'
+    ].map(function(level) {
+        return config.resolvePath(level);
+    });
+}
+
+function getTouchPadLibLevels(config) {
+    return [
+        'common.blocks',
+        'touch.blocks'
+    ].map(function(level) {
+        return config.resolvePath(level);
+    });
+}
+
+function getTouchPhoneLibLevels(config) {
+    return [
+        'common.blocks',
+        'touch.blocks'
     ].map(function(level) {
         return config.resolvePath(level);
     });
