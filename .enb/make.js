@@ -156,7 +156,8 @@ function getDesktopLevels(config) {
         'common.blocks',
         'desktop.blocks',
         'design/common.blocks',
-        'design/desktop.blocks'
+        'design/desktop.blocks',
+        'test.blocks'
     ].map(function(level) {
         return config.resolvePath(level);
     });
@@ -170,7 +171,8 @@ function getTouchPadLevels(config) {
         'touch.blocks',
         'design/common.blocks',
         'design/touch.blocks',
-        'design/touch-pad.blocks'
+        'design/touch-pad.blocks',
+        'test.blocks'
     ].map(function(level) {
         return config.resolvePath(level);
     });
@@ -184,7 +186,8 @@ function getTouchPhoneLevels(config) {
         'touch.blocks',
         'design/common.blocks',
         'design/touch.blocks',
-        'design/touch-phone.blocks'
+        'design/touch-phone.blocks',
+        'test.blocks'
     ].map(function(level) {
         return config.resolvePath(level);
     });
