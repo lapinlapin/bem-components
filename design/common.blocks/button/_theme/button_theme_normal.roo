@@ -38,6 +38,8 @@
         position: relative;
 
         display: inline-block;
+
+        vertical-align: top;
     }
 
     &.button_type_link
