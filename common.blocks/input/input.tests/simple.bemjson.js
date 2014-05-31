@@ -101,29 +101,12 @@
         } },
 
         { tag : 'h3', content : 'label' },
-        { tag : 'p', content : {
-            block : 'input',
-            mods : {
-                theme : 'normal',
-                'has-clear' : true,
-                'has-label' : true,
-                size : 'm'
-            },
-            val : 'monolithic',
-            label : 'label',
-            placeholder : 'placeholder'
-        } },
         { tag : 'p', content : [
-            {
-                block : 'input',
-                elem : 'label',
-                id : 'with-label',
-                content : 'label'
-            },
+            { block : 'input', elem : 'label', id : 'inline-label', content : 'label' },
             ': ',
             {
                 block : 'input',
-                id : 'with-label',
+                id : 'inline-label',
                 mods : { theme : 'normal', 'has-clear' : true, size : 'm' },
                 val : 'separate',
                 placeholder : 'placeholder'
