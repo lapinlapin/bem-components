@@ -133,11 +133,11 @@
     &.input_size_s
     {
         font-size: 13px;
-        line-height: 24px;
+        line-height: 15px;
 
         .input__control
         {
-            height: 24px;
+            height: 25px;
             padding-left: 6px;
         }
 
@@ -151,11 +151,11 @@
     &.input_size_m
     {
         font-size: 13px;
-        line-height: 28px;
+        line-height: 15px;
 
         .input__control
         {
-            height: 28px;
+            height: 29px;
             padding-left: 8px;
         }
 
@@ -186,11 +186,11 @@
     &.input_size_l
     {
         font-size: 15px;
-        line-height: 32px;
+        line-height: 17px;
 
         .input__control
         {
-            height: 32px;
+            height: 33px;
             padding-left: 10px;
         }
 
@@ -203,11 +203,11 @@
     &.input_size_xl
     {
         font-size: 18px;
-        line-height: 38px;
+        line-height: 22px;
 
         .input__control
         {
-            height: 38px;
+            height: 39px;
             padding-left: 12px;
         }
 
