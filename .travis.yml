@@ -12,15 +12,20 @@ install: npm isntall && npm run deps
 after_success:
   - |
       npm run examples
+
       echo -n $rsa_{1..30} >> ~/.ssh/id_rsa_base64
       base64 --decode --ignore-garbage ~/.ssh/id_rsa_base64 > ~/.ssh/id_rsa
       chmod 600 ~/.ssh/id_rsa
+
+      if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then dir="branch-$TRAVIS_BRANCH";
+      else dir="pr-$TRAVIS_PULL_REQUEST"; fi
+
       rsync -avh -e 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no' \
           --stats \
           --delete \
           --prune-empty-dirs \
           --include-from=rsync.txt \
-          ./ "bem@persidskiy.me:/var/bem/bem-components/pr-$TRAVIS_PULL_REQUEST/"
+          ./ "bem@persidskiy.me:/var/bem/bem-components/$dir/"
 
   - npm install coveralls
   - ./node_modules/.bin/istanbul report lcovonly
