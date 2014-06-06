@@ -10,58 +10,101 @@
 
         { tag : 'h2', content : 'default' },
         { tag : 'p', content : { block : 'link', text : 'default' } },
-        { tag : 'p', content : {
+        {
             block : 'link',
-            content : 'Empty link 1'
-        } },
-        { tag : 'p', content : {
+            content : 'Empty link'
+        },
+        {
+            tag : 'span',
+            content : ' – with no url'
+        }, '<br>',
+        {
+            block : 'link',
+            url : 'http://yandex.ru',
+            content : 'yandex.ru'
+        },
+        {
+            tag : 'span',
+            content : ' – simple url'
+        },'<br>',
+        {
             block : 'link',
             url : {
                 block : 'link-content',
                 tag : '',
                 content : '/action'
             },
-            content : 'url with bemjson'
-        } },
-        { tag : 'p', content : {
-            block : 'link',
-            url : 'http://yandex.ru',
-            content : 'yandex.ru'
-        } },
-        { tag : 'p', content : {
+            content : 'My url – bemjson'
+        },
+        {
+            tag : 'span',
+            content : ' – bemjson url'
+        },'<br>',
+        {
             block : 'link',
             url : 'http://yandex.com',
             title : 'One of the largest internet companies in Europe',
             content : 'yandex.com'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – with title'
+        },'<br>',
+        {
             block : 'link',
             url : 'http://yandex.com.tr',
             title : 'One of the largest internet companies in Europe',
             target : '_blank',
             content : 'yandex.com.tr'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – blank target'
+        },'<br>',
+        {
             block : 'link',
             mods : { pseudo : true },
             content : 'Pseudo link'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – pseudo link'
+        },'<br>',
+        {
             block : 'link',
+            url : 'http://yandex.com.tr',
             tabIndex : -1,
             content : 'yandex.ru'
-        } },
+        },
+        {
+            tag : 'span',
+            content : ' – out of tab order'
+        },
 
         { tag : 'hr' },
 
         { tag : 'h2', content : 'simple' },
         { tag : 'p', content : { block : 'link', text : 'simple' } },
-        { tag : 'p', content : {
+        {
             block : 'link',
             mods : { theme : 'simple' },
-            content : 'Empty link 1'
-        } },
-        { tag : 'p', content : {
+            content : 'Empty link'
+        },
+        {
+            tag : 'span',
+            content : ' – with no url'
+        },'<br>',
+        {
+            block : 'link',
+            mods : { theme : 'simple' },
+            url : 'http://yandex.ru',
+            content : 'yandex.ru'
+        },
+        {
+            tag : 'span',
+            content : ' – simple url'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'simple' },
             url : {
@@ -69,52 +112,80 @@
                 tag : '',
                 content : '/action'
             },
-            content : 'url with bemjson'
-        } },
-        { tag : 'p', content : {
-            block : 'link',
-            mods : { theme : 'simple' },
-            url : 'http://yandex.ru',
-            content : 'yandex.ru'
-        } },
-        { tag : 'p', content : {
+            content : 'My url – bemjson'
+        },
+        {
+            tag : 'span',
+            content : ' – bemjson url'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'simple' },
             url : 'http://yandex.com',
             title : 'One of the largest internet companies in Europe',
             content : 'yandex.com'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – with title'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'simple' },
             url : 'http://yandex.com.tr',
             title : 'One of the largest internet companies in Europe',
             target : '_blank',
             content : 'yandex.com.tr'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – blank target'
+        },'<br>',
+        {
             block : 'link',
-            mods : { theme : 'simple' },
-            mods : { pseudo : true },
+            mods : { pseudo : true, theme : 'simple' },
             content : 'Pseudo link'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – pseudo link'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'simple' },
+            url : 'http://yandex.com.tr',
             tabIndex : -1,
             content : 'yandex.ru'
-        } },
+        },
+        {
+            tag : 'span',
+            mods : { theme : 'simple' },
+            content : ' – out of tab order'
+        },
 
         { tag : 'hr' },
 
         { tag : 'h2', content : 'normal' },
         { tag : 'p', content : { block : 'link', text : 'normal' } },
-        { tag : 'p', content : {
+        {
             block : 'link',
             mods : { theme : 'normal' },
-            content : 'Empty link 1'
-        } },
-        { tag : 'p', content : {
+            content : 'Empty link'
+        },
+        {
+            tag : 'span',
+            content : ' – with no url'
+        },'<br>',
+        {
+            block : 'link',
+            mods : { theme : 'normal' },
+            url : 'http://yandex.ru',
+            content : 'yandex.ru'
+        }, {
+            tag : 'span',
+            content : ' – simple url'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'normal' },
             url : {
@@ -122,40 +193,55 @@
                 tag : '',
                 content : '/action'
             },
-            content : 'url with bemjson'
-        } },
-        { tag : 'p', content : {
-            block : 'link',
-            mods : { theme : 'normal' },
-            url : 'http://yandex.ru',
-            content : 'yandex.ru'
-        } },
-        { tag : 'p', content : {
+            content : 'My url – bemjson'
+        },
+        {
+            tag : 'span',
+            content : ' – bemjson url'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'normal' },
             url : 'http://yandex.com',
             title : 'One of the largest internet companies in Europe',
             content : 'yandex.com'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – with title'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'normal' },
             url : 'http://yandex.com.tr',
             title : 'One of the largest internet companies in Europe',
             target : '_blank',
             content : 'yandex.com.tr'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – blank target'
+        },'<br>',
+        {
             block : 'link',
-            mods : { theme : 'normal' },
-            mods : { pseudo : true },
+            mods : { pseudo : true, theme : 'normal' },
             content : 'Pseudo link'
-        } },
-        { tag : 'p', content : {
+        },
+        {
+            tag : 'span',
+            content : ' – pseudo link'
+        },'<br>',
+        {
             block : 'link',
             mods : { theme : 'normal' },
+            url : 'http://yandex.com.tr',
             tabIndex : -1,
             content : 'yandex.ru'
-        } }
-    ].map(function(l) { return { tag : 'div', content : l } })
+        },
+        {
+            tag : 'span',
+            content : ' – out of tab order'
+        }
+
+    ]
 })
