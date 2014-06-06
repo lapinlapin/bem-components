@@ -17,7 +17,10 @@
         {
             tag : 'span',
             content : ' – with no url'
-        }, '<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             url : 'http://yandex.ru',
@@ -26,7 +29,10 @@
         {
             tag : 'span',
             content : ' – simple url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             url : {
@@ -39,7 +45,10 @@
         {
             tag : 'span',
             content : ' – bemjson url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             url : 'http://yandex.com',
@@ -49,7 +58,10 @@
         {
             tag : 'span',
             content : ' – with title'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             url : 'http://yandex.com.tr',
@@ -60,7 +72,10 @@
         {
             tag : 'span',
             content : ' – blank target'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { pseudo : true },
@@ -69,7 +84,10 @@
         {
             tag : 'span',
             content : ' – pseudo link'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             url : 'http://yandex.com.tr',
@@ -93,7 +111,10 @@
         {
             tag : 'span',
             content : ' – with no url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'simple' },
@@ -103,7 +124,10 @@
         {
             tag : 'span',
             content : ' – simple url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'simple' },
@@ -117,7 +141,10 @@
         {
             tag : 'span',
             content : ' – bemjson url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'simple' },
@@ -128,7 +155,10 @@
         {
             tag : 'span',
             content : ' – with title'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'simple' },
@@ -140,7 +170,10 @@
         {
             tag : 'span',
             content : ' – blank target'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { pseudo : true, theme : 'simple' },
@@ -149,7 +182,10 @@
         {
             tag : 'span',
             content : ' – pseudo link'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'simple' },
@@ -175,16 +211,23 @@
         {
             tag : 'span',
             content : ' – with no url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'normal' },
             url : 'http://yandex.ru',
             content : 'yandex.ru'
-        }, {
+        },
+        {
             tag : 'span',
             content : ' – simple url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'normal' },
@@ -198,7 +241,10 @@
         {
             tag : 'span',
             content : ' – bemjson url'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'normal' },
@@ -209,7 +255,10 @@
         {
             tag : 'span',
             content : ' – with title'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'normal' },
@@ -221,7 +270,10 @@
         {
             tag : 'span',
             content : ' – blank target'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { pseudo : true, theme : 'normal' },
@@ -230,7 +282,10 @@
         {
             tag : 'span',
             content : ' – pseudo link'
-        },'<br>',
+        },
+
+        { tag : 'br' },
+
         {
             block : 'link',
             mods : { theme : 'normal' },
