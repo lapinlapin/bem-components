@@ -27,7 +27,6 @@
         display: inline-block;
 
         box-sizing: border-box;
-        margin-top: -1px; /* Hack for IE 9+ (any negative value allowed) */
         padding: 0;
         width: 100%;
 
@@ -137,7 +136,7 @@
 
         .input__control
         {
-            height: 25px;
+            height: 24px;
             padding-left: 6px;
         }
 
@@ -155,7 +154,7 @@
 
         .input__control
         {
-            height: 29px;
+            height: 28px;
             padding-left: 8px;
         }
 
@@ -190,7 +189,7 @@
 
         .input__control
         {
-            height: 33px;
+            height: 32px;
             padding-left: 10px;
         }
 
@@ -207,7 +206,7 @@
 
         .input__control
         {
-            height: 39px;
+            height: 38px;
             padding-left: 12px;
         }
 
